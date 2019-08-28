@@ -1,0 +1,10 @@
+applications:
+- name: demo-batch-micrometer
+  path: target/demo-batch-micrometer-0.0.1-SNAPSHOT.jar
+  instances: 0
+  memory: 768m
+  no-route: true
+  health-check-type: process
+  services:
+  - batch-db # cf create-service cleardb spark batch-db
+  - pushgateway # cf create-user-provided-service pushgateway -p '{"url":"https://your-pushgateway.example.com"}'
