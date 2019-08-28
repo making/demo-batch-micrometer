@@ -39,7 +39,7 @@ public class BatchJobConfig {
     @Bean
     public Step step() {
         return stepBuilderFactory.get("step") //
-            .<Crime, Crime>chunk(3) //
+            .<Crime, Crime>chunk(10) //
             .reader(crimeItemReader()) //
             .processor(new PassThroughItemProcessor<>()) //
             .writer(this.crimeItemWriter) //
