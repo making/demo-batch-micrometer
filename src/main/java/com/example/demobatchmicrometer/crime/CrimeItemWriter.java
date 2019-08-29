@@ -19,6 +19,6 @@ public class CrimeItemWriter implements ItemWriter<Crime> {
         log.info("<=====");
         items.forEach(i -> log.info(">> {}:{}", i.getItemCount(), i));
         log.info("=====>");
-        Thread.sleep(1000);
+        Thread.sleep(300);
     }
 }
